@@ -48,7 +48,7 @@ int main() {
     std::cout << "Save - Metni dosyaya kaydet" << std::endl;
     std::cout << "Undo - Son islemi geri al" << std::endl;
 
-    while (1) {
+    while (true) {
         std::cout << "Komut Girin ";
         std::cin >> input;
         std::string command = input.substr(0, input.find(" "));
