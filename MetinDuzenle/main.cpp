@@ -1,3 +1,6 @@
+//Ferhat Yiğit Aydın
+//02.07.2025
+
 #include <iostream>
 #include <string>
 #include <fstream>

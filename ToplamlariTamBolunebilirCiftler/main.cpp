@@ -31,7 +31,7 @@ int CheckInput(int CountNumber, size_t PozNumber)
 int mod(int a, int b) {
     return ((a % b) + b) % b;
 }
-//************************* */
+
 void FindExactlyDivisibleAndPush(int CountNumber, std::vector<int>& Numbers, size_t NumberForMode) {
     std::vector<std::pair<int, int>> Couples;
 
@@ -45,12 +45,7 @@ void FindExactlyDivisibleAndPush(int CountNumber, std::vector<int>& Numbers, siz
     }
 
     for (const auto& c : Couples) {
-        int sum = Numbers[c.first] + Numbers[c.second];
-        std::cout << "(" << c.first << ", " << c.second << ") -> ("
-                  << Numbers[c.first] << ", " << Numbers[c.second] << ")"
-                  << ", toplam: " << sum
-                  << ", mod " << NumberForMode << ": " << mod(sum, NumberForMode)
-                  << std::endl;
+        std::cout << "(" << c.first << ", " << c.second << ")" << std::endl;
     }
 }
 
@@ -60,10 +55,10 @@ void StartAlgorithm(int CountNumber, size_t NumberForMode){
     std::vector<int> Numbers(CountNumber);
     while (index < CountNumber)
         Numbers[index++] = RandomValue();
-    std::cout << "Random Sayilar:" << std::endl;
-    for (int i = 0; i < index; i++)
-        std::cout << Numbers[i] << std::endl;
-    std::cout << "------------" << std::endl;
+    
+    for (int i = 0; i < index; i++){
+        std::cout << i + 1 <<  ". sayi: " << Numbers[i] << std::endl;;
+    }
     FindExactlyDivisibleAndPush(CountNumber, Numbers, NumberForMode);
 }
 
