@@ -25,4 +25,4 @@ rAli
 - Son satır eksik çıkıyordu, index kontrolü ile düzeltildi.
 - Gerekirse Türkçe karakter dönüştürme eklenebilir.
 
-Programı çalıştırmak için extra Makefile yazıldı. "make" Yazarak kodu derleyebilirsiniz.
+Programı çalıştırmak için extra Makefile yazıldı. "make" Yazarak kodu derleyebilirsiniz.(Ubuntu ile Make çalıştırdım.)

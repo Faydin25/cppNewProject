@@ -17,4 +17,4 @@ int mod(int a, int b) {
 ```
 Bu fonksiyon, hem pozitif hem negatif sayılar için doğru mod değerini verir. 
 
-Programı çalıştırmak için extra Makefile yazıldı. "make" Yazarak kodu derleyebilirsiniz.
+Programı çalıştırmak için extra Makefile yazıldı. "make" Yazarak kodu derleyebilirsiniz.(Ubuntu ile Make çalıştırdım.)
