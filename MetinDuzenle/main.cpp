@@ -6,7 +6,7 @@
 #include <fstream>
 #include <stack>
 
-std::string Append(std::string WordToAdd, std::string str) {
+std::string Append(std::string wordToAdd, std::string str) {
     for (char c : WordToAdd) {
         str += c;
     }
