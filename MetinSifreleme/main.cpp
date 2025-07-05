@@ -20,7 +20,6 @@ std::string DeleteSpace(std::string str)
 void StartAlgorithm(std::string str)
 {
     int l = str.length();
-    int index = 0;
     int lower = floor(sqrt(l)); // alt taban Y EKS
     int upper = ceil(sqrt(l));  // üst taban X EKS 
     int m = 0, n = 0;

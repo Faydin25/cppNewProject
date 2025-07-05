@@ -1,5 +1,5 @@
 # Ferhat Yiğit Aydın
-# 04.07.2025
+# 05.07.2025
 
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -O2
@@ -17,4 +17,4 @@ clean:
 fclean:
 	rm -f $(TARGET) *.o
 
-re: fclean all
+re: fclean all 

@@ -5,7 +5,6 @@
 
 Bu program, verilen bir metni boşluklardan arındırıp satır-sütun matrisine dönüştürerek şifreli bir görünüm sunar.
 
-### 🔧 Adımlar
 1. Dosyadan metin okunur.
 2. Boşluklar silinir.
 3. Metin uzunluğu `l` alınır.
@@ -23,6 +22,6 @@ rAli
 
 - Başta `m * n < l` hatası yaşandı, dinamik hesaplamayla çözüldü.
 - Son satır eksik çıkıyordu, index kontrolü ile düzeltildi.
-- Gerekirse Türkçe karakter dönüştürme eklenebilir.
+- Gerekirse Türkçe karakter dönüştürme eklenebilir. Türkçe karakterler bastırılırken ascii değerlerinden dolayı karmaşa yaşanabiliyor.
 
 Programı çalıştırmak için extra Makefile yazıldı. "make" Yazarak kodu derleyebilirsiniz.(Ubuntu ile Make çalıştırdım.)

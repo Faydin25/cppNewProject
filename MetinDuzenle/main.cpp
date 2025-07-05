@@ -18,7 +18,7 @@ std::string Delete(std::string str, int index) {
     if (index == 0) {
         return str;
     }
-    if (index > str.length()) {
+    if (index > (int)str.length()) {
         index = str.length(); // kontrol!!
     }
     str.erase(str.end() - index, str.end());

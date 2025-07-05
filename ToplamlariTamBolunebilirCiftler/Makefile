@@ -13,3 +13,8 @@ $(TARGET): $(SRC)
 
 clean:
 	rm -f $(TARGET)
+
+fclean:
+	rm -f $(TARGET) *.o
+
+re: fclean all
