@@ -7,8 +7,8 @@
 #include <ctime>
 #include <cmath> // abs, min için
 
-const int TotalPoints = 21; // 0–20 dahil
-int LastStep = 100;
+const int totalPoints = 21; // 0–20 dahil
+int lastStep = 100;
 
 void SelectRandomAddress(std::vector<std::pair<int, int>> &Address)
 {
@@ -16,11 +16,11 @@ void SelectRandomAddress(std::vector<std::pair<int, int>> &Address)
     for (size_t i = 0; i < Address.size(); i++) {
         const auto& item = Address[i];
         if (item.second != 1) {
-            if (LastStep == 100) {
+            if (lastStep == 100) {
                 SuitableIndexes.push_back(i); // ilk adım için mesafe önemsiz
             } else {
-                int diff = std::abs(item.first - LastStep);
-                int circularDistance = std::min(diff, TotalPoints - diff);
+                int diff = std::abs(item.first - lastStep);
+                int circularDistance = std::min(diff, totalPoints - diff);
                 if (circularDistance >= 5)
                     SuitableIndexes.push_back(i);
             }
@@ -33,7 +33,7 @@ void SelectRandomAddress(std::vector<std::pair<int, int>> &Address)
         std::cout << "Gezilen Nokta: " << Address[selectedIndex].first << std::endl;
 
         Address[selectedIndex].second = 1;
-        LastStep = Address[selectedIndex].first;
+        lastStep = Address[selectedIndex].first;
     } else {
         std::cout << "Suitable bos!" << std::endl;
     }
@@ -41,10 +41,10 @@ void SelectRandomAddress(std::vector<std::pair<int, int>> &Address)
 
 int main()
 {
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));//Randomluğun bozulmaması için!
 
     std::vector<std::pair<int, int>> Address;
-    for (int i = 0; i < TotalPoints; ++i){
+    for (int i = 0; i < totalPoints; ++i){
         Address.push_back({i, 0});
     }
     
