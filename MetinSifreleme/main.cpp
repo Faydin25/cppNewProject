@@ -9,15 +9,15 @@
 
 std::string DeleteSpace(std::string str)
 {
-    std::string NeWstr;
+    std::string newStr;
     for (int i = 0; str[i] != '\0' ; i++){
         if (str[i] != ' ')
-            NeWstr += str[i];
+            newStr += str[i];
     }
-    return NeWstr;
+    return newStr;
 }
 
-void StartAlgorithm(std::string str)
+int StartAlgorithm(std::string str)
 {
     int l = str.length();
     int lower = floor(sqrt(l)); // alt taban Y EKS
@@ -35,8 +35,10 @@ void StartAlgorithm(std::string str)
         }
         if (m && n) break;
     }
-    if ((m * n) < l)
+    if ((m * n) < l){
         std::cout << "Hata Var!" << std::endl;
+        return 1;
+    }
     else
     {
         int index = 0;
@@ -48,6 +50,7 @@ void StartAlgorithm(std::string str)
             std::cout << std::endl;
         }
     }
+    return 0;
 }
 
 int main()
@@ -66,8 +69,12 @@ int main()
     buffer << file.rdbuf();
     std::string str = buffer.str();
     std::string newStr = DeleteSpace(str);
-    StartAlgorithm(newStr);
-
-    file.close();
-    return 0;
+    if (StartAlgorithm(newStr)){
+        file.close();
+        return 1;
+    }
+    else{
+        file.close();
+        return 0;
+    }
 }
